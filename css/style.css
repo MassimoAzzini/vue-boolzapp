@@ -7,6 +7,7 @@ body {
 
 .cst-container {
   max-width: 1600px;
+  min-width: 935px;
   height: 95%;
   width: 95%;
 }
@@ -37,7 +38,21 @@ body {
 .top-option i {
   font-size: 20px;
   color: #b1b1b1;
-  
+}
+
+.search {
+  color: #b5b8ba;
+}
+
+.search input {
+  padding-left: 10px;
+  border: 1px solid #e9ebeb;
+}
+
+.search span {
+  padding: 1px 20px;
+  border: 1px solid #e9ebeb;
+  background-color: white;
 }
 
 .notifications {
@@ -68,6 +83,7 @@ body {
 }
 
 .contact {
+  cursor: pointer;
   width: 100%;
   height: 80px;
   border: 1px solid #e9ebeb;
@@ -78,7 +94,6 @@ body {
   color: #c3c5c7;
 }
 
-
 .contact-info .name {
   color: black;
   font-size: 1.2rem;
@@ -88,16 +103,51 @@ body {
   font-size: 0.8rem;
 }
 
-.active {
+.contact:hover {
   background-color: #e9ebeb;
 }
 
 .msg-container {
+  padding: 20px 8%;
   height: calc(100% - 140px);
   background-image: url(../img/mine.jpg);
 }
 
-.new-message {
+.new-message-bar {
+  font-size: 1.5rem;
+  color: #6b7376;
   height: 70px;
   background-color: #f3eeea;
+}
+
+.new-message-bar input {
+  height: 50px;
+  width: 80%;
+  font-size: 1rem;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.my-msg .msg{
+  background-color: #d5f9ba;
+}
+
+.reply-msg .msg{
+  background-color: white;
+}
+
+.msg {
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 320px;
+  margin: 5px 0;
+}
+
+.msg .time {
+  font-size: 0.7rem;
+  color: #c3c5c7;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }

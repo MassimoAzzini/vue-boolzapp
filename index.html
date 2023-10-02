@@ -19,6 +19,7 @@
 </head>
 <body class="vh-100 w-100">
   <div id="app" class="cst-container d-flex">
+    <!-- aside -->
     <div class="aside h-100">
       <!-- top side -->
       <div class="top-side">
@@ -50,7 +51,8 @@
         </div>
         <!-- end notifiche -->
         <div class="search w-100 d-flex align-items-center px-2">
-          <input class="w-100" type="text">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- ent top-side -->
@@ -81,7 +83,7 @@
     </div>
     <!-- end aside -->
 
-
+    <!-- container message -->
     <div class="contact-message-container h-100">
       <div class="d-flex justify-content-between top-option ps-2 pe-4">
         <div class="h-100 d-flex">
@@ -94,26 +96,36 @@
           </div>
         </div>        
         <div class="d-flex align-items-center">
-          <i class="fa-solid fa-circle-notch"></i>
-          <i class="fa-solid fa-message mx-3"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>          
+          <i class="fa-solid fa-paperclip mx-3"></i>
           <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
       </div>
 
-      <div class="msg-container">
+      <div class="msg-container d-flex flex-column">
+        <div class="my-msg d-flex justify-content-end">
+          <span class="msg position-relative">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quos.</span>
+            <span class="time">12:00</span>
+          </span>
+        </div>
+        <div class="reply-msg d-flex">
+          <span class="msg position-relative">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, quos.</span>
+            <span class="time">12:00</span>
+          </span>
+        </div>
+
         
       </div>
 
-      <div class="new-message">
-
+      <div class="new-message-bar d-flex justify-content-evenly align-items-center">
+        <i class="fa-regular fa-face-smile"></i>
+        <input type="text" placeholder="Scrivi un messaggio">
+        <i class="fa-solid fa-microphone"></i>
       </div>
-
-
-
     </div>
-
-
-
+    <!-- end container message -->
 
   </div>
 
