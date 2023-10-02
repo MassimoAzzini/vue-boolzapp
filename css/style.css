@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #dadbd3 85%, #009688 15%);
+}
+
+.cst-container {
+  height: 95%;
+  width: 80%;
+}
+
+.aside {
+  width: 40%;
+  background-color: red;
+}
+
+.contact-container {
+  width: 60%;
+  background-color: blue;
+}
+
+.top-option {
+  height: 70px;
+  background-color: #eaeaea;
+}
+
+.image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.top-option i {
+  font-size: 20px;
+  color: #b1b1b1;
+  
+}
+
+.notifications {
+  height: 80px;
+  background-color: #8edafc;
+}
+
+.notifications i{
+  font-size: 20px;
+  color: #8edafc;
+}
+
+.activ-notifications {
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: #6093a4;
+}
+
+.top-side .search {
+  background-color: #fafafa;
+}
+
