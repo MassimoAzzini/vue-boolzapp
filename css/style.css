@@ -6,18 +6,19 @@ body {
 }
 
 .cst-container {
+  max-width: 1600px;
   height: 95%;
-  width: 80%;
+  width: 95%;
 }
 
 .aside {
-  width: 40%;
-  background-color: red;
+  width: 35%;
 }
 
-.contact-container {
-  width: 60%;
-  background-color: blue;
+.contact-message-container {
+  width: 65%;
+  background-color: lightcyan;
+  border-left: 2px solid #d6d6d6;
 }
 
 .top-option {
@@ -56,6 +57,47 @@ body {
 }
 
 .top-side .search {
+  height: 50px;
   background-color: #fafafa;
 }
 
+.bottom-side {
+  height: calc(100% - 200px);
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.contact {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #e9ebeb;
+  color: #c3c5c7;
+}
+
+.contact-info {
+  color: #c3c5c7;
+}
+
+
+.contact-info .name {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.contact-info .last-message {
+  font-size: 0.8rem;
+}
+
+.active {
+  background-color: #e9ebeb;
+}
+
+.msg-container {
+  height: calc(100% - 140px);
+  background-image: url(../img/mine.jpg);
+}
+
+.new-message {
+  height: 70px;
+  background-color: #f3eeea;
+}
