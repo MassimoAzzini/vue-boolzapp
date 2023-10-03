@@ -10,11 +10,14 @@ createApp({
     }
   },
   methods: {
-    lastItemArray(contact){
-      
-      return contact.messages[contact.messages.length - 1]
 
-    }
+    lastItemArray(contact){
+      return contact.messages[contact.messages.length - 1]
+    },
+
+    // sentReceived(msg){
+    //   (msg.status === 'sent') ? 'my-msg' : 'reply-msg'
+    // }
     
     
   },

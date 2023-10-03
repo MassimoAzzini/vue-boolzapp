@@ -12,6 +12,7 @@ body {
   width: 95%;
 }
 
+/* -------- ASIDE --------- */
 .aside {
   width: 35%;
 }
@@ -99,14 +100,22 @@ body {
   font-size: 1.2rem;
 }
 
-.contact-info .last-message {
+.last-message {
   font-size: 0.8rem;
 }
 
 .contact:hover {
+  background-color: #eaeaea;
+}
+
+.active {
   background-color: #e9ebeb;
 }
 
+/*--------- END ASIDE ---------*/
+
+
+/*----------- MESSAGE CONTAINER ------------*/
 .msg-container {
   padding: 20px 8%;
   height: calc(100% - 140px);
@@ -130,6 +139,15 @@ body {
   border: none;
 }
 
+.my-msg {
+  justify-content: end;
+}
+
+.reply-msg .msg{
+  justify-content: start;
+}
+
+
 .my-msg .msg{
   background-color: #d5f9ba;
 }
@@ -152,3 +170,4 @@ body {
   bottom: 0;
   right: 5px;
 }
+/*----------- END MESSAGE CONTAINER ------------*/
