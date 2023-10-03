@@ -37,7 +37,21 @@ createApp({
   
       this.newMsg = '';
 
+      setTimeout (risposta, 1000);
+
+      function risposta(){
+        const newReceivedMsgObj = {
+          date: 'this.clock()',
+          message: 'Bravissimo!',
+          status: 'received'
+        };
+        
+        this.contacts[this.indexActive].messages.push(newReceivedMsgObj);
+      }
+
     },
+
+
 
 
   },
