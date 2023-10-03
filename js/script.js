@@ -1,3 +1,5 @@
+const dt = luxon.DateTime;
+
 import { contacts } from './db.js';
 
 const { createApp } = Vue
@@ -28,7 +30,7 @@ createApp({
         status: 'sent'
       };
 
-      this.contact.messages.pusch(newMsgObj);
+      this.contacts.messages.push(newMsgObj);
   
       this.newMsg = '';
 
