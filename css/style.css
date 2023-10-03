@@ -109,7 +109,7 @@ body {
 }
 
 .active {
-  background-color: #e9ebeb;
+  background-color: lightgray;
 }
 
 /*--------- END ASIDE ---------*/
@@ -146,7 +146,6 @@ body {
 .reply-msg .msg{
   justify-content: start;
 }
-
 
 .my-msg .msg{
   background-color: #d5f9ba;
