@@ -64,18 +64,23 @@
       <!-- bottom side -->
       <div class="bottom-side">
         <!-- contatto -->
-        <div class="contact d-flex justify-content-between ps-3 p-2" v-for="contact in contacts">
+        <div
+          @click="indexActive = index"
+          class="contact d-flex justify-content-between ps-3 p-2"
+          v-for="(contact, index) in contacts">
+
           <div class="h-100 d-flex">
             <div class="image align-self-center me-3">
               <img class="w-100 " :src="contact.avatar" :alt="contact.name">
             </div>
             <div class="contact-info d-flex flex-column">
               <span class="name">{{contact.name}}</span>
-              <span class="last-message" v-for="infoMsg in contact.messages">{{infoMsg.message}}</span>
+              <span
+                class="last-message">{{lastItemArray(contact).message}}</span>
             </div>
           </div>
-          <div class="last-message" v-for="infoMsg in contact.messages">
-            <span>{{infoMsg.date}}</span>
+          <div class="last-message">
+            <span>{{lastItemArray(contact).date}}</span>
           </div>
         </div>
         <!-- fine contatto -->
