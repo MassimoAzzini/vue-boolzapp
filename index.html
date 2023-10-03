@@ -117,6 +117,7 @@
         </div>
       </div>
 
+      <!-- layout message -->
       <div class="msg-container d-flex flex-column">
         <div v-for="(msg, index) in contacts[indexActive].messages" class="d-flex" :class="{'my-msg': msg.status === 'sent', 'reply-msg': msg.status === 'received'}">
           <span class="msg position-relative">
@@ -126,6 +127,7 @@
         </div>
       </div>
 
+      <!-- write new message -->
       <div class="new-message-bar d-flex justify-content-evenly align-items-center">
         <i class="fa-regular fa-face-smile"></i>
         <input @keyup.enter="addMsg" v-model="newMsg" type="text" placeholder="Scrivi un messaggio">

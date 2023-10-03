@@ -12,20 +12,19 @@ createApp({
   },
 
   methods: {
-
+    // prendo l'ultimo oggetto dell'array (messaggio e data) da visualizzare sotto i contatti
     lastItemArray(contact){
       return contact.messages[contact.messages.length - 1]
     },
 
+    // formattazione ora e giorno al momento del messaggio
     clock(){
-
       const nawTime = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
 
       return nawTime
-
     },
 
-
+    // nuovo messaggio critto
     addMsg(){
       const newMsgObj = {
         date: this.clock(),
@@ -37,11 +36,12 @@ createApp({
   
       this.newMsg = '';
 
-      setTimeout (this.risposta, 1000);
-      
+      // timeout per riposta automatica
+      setTimeout (this.answer, 1000);
     },
 
-    risposta(){
+    // risposta automatica
+    answer(){
       const newReceivedMsgObj = {
         date: this.clock(),
         message: 'Bravissimo!',
