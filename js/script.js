@@ -9,21 +9,38 @@ createApp({
       indexActive: 0
     }
   },
+
   methods: {
 
     lastItemArray(contact){
       return contact.messages[contact.messages.length - 1]
     },
 
-    // sentReceived(msg){
-    //   (msg.status === 'sent') ? 'my-msg' : 'reply-msg'
-    // }
-    
-    
+    printClock(){
+      this.nawTime = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+    },
+
+
+    addMsg(){
+      const newMsgObj = {
+        date: this.printClock(),
+        message: this.newMsg,
+        status: 'sent'
+      };
+
+      this.contact.messages.pusch(newMsgObj);
+  
+      this.newMsg = '';
+
+    },
+
+
   },
+
   computed: {
 
   },
+  
   mounted() {
 
   },

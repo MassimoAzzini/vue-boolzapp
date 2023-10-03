@@ -128,11 +128,11 @@
 
       <div class="new-message-bar d-flex justify-content-evenly align-items-center">
         <i class="fa-regular fa-face-smile"></i>
-        <input type="text" placeholder="Scrivi un messaggio">
+        <input @keyup.enter="addMsg" v-model="newMsg" type="text" placeholder="Scrivi un messaggio">
         <i class="fa-solid fa-microphone"></i>
       </div>
     </div>
-    <!---------------------- end container message ---------------------------->
+    <!--------------- end container message ------------------>
 
   </div>
 
