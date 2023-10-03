@@ -111,6 +111,7 @@ body {
   padding: 20px 8%;
   height: calc(100% - 140px);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
 
 .new-message-bar {
