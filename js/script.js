@@ -51,21 +51,33 @@ createApp({
       
       this.contacts[this.indexActive].messages.push(newReceivedMsgObj);
     },
-    
+
     findContact(){
-      if(this.contacts.name.includes(this.search)){
-        this.contacts.visible == true
-      }else{this.contacts.visible == false}
+      this.contacts.map((contact, index) => {
+        
+        if(this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())){
+          this.contacts[index].visible = true
+        }else{this.contacts[index].visible = false}
+      })
     }
+
+    
   },
-
+  
   computed: {
-
+    
     visibleContact(){
       return this.contacts.filter(contact => contact.visible == true)
-    }
-
+    },
     
+    
+    // findContact(){
+    //   this.contacts.forEach((contact, index) => {
+    //   if(contact[index].name.includes(this.search)){
+    //     contact[index].visible == true
+    //   }else{contact[index].visible == false}
+    //   })
+    // }
 
   },
   
