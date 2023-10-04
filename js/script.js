@@ -8,7 +8,6 @@ createApp({
     return {
       contacts,
       indexActive: 0,
-      visibleContacts:[]
     }
   },
 
