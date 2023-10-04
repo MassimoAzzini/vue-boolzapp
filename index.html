@@ -58,7 +58,7 @@
         <!-- ricerca contatti -->
         <div class="search w-100 d-flex align-items-center px-2">
           <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input v-model="search" class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+          <input @keyup="findContact" v-model="search" class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- end ricerca contatti -->
 

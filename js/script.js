@@ -8,6 +8,7 @@ createApp({
     return {
       contacts,
       indexActive: 0,
+      search: '',
     }
   },
 
@@ -50,14 +51,20 @@ createApp({
       
       this.contacts[this.indexActive].messages.push(newReceivedMsgObj);
     },
-
+    
+    findContact(){
+      if(this.contacts.name.includes(this.search)){
+        this.contacts.visible == true
+      }else{this.contacts.visible == false},
+    }
   },
 
   computed: {
 
     visibleContact(){
-      return this.contacts.filter(contact => this.contacts.visible = true)
-    },
+      return this.contacts.filter(contact => contact.visible == true)
+    }
+
     
 
   },
