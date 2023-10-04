@@ -170,25 +170,28 @@ body {
   bottom: 0;
   right: 5px;
 }
-/*----------- END MESSAGE CONTAINER ------------*/
-
-.cst-dropdown{
-  position: absolute;
-  top: 0;
-  right: 5px;
-}
-
-.cst-btn {
-  padding: 0;
-  margin: 0;
-  border: none;
-
-}
-
-.msg ul {
-  font-size: 0.8rem;
-}
 
 .cst-wrap {
   overflow-wrap: anywhere;
 }
+
+/* edit dropdown */
+.cst-dropdown {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+  
+.cst-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  
+}
+  
+.msg ul {
+  font-size: 0.8rem;
+}
+  
+
+/*----------- END MESSAGE CONTAINER ------------*/

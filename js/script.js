@@ -52,6 +52,7 @@ createApp({
       this.contacts[this.indexActive].messages.push(newReceivedMsgObj);
     },
 
+    // se il nome del contatto NON contiene la lettere inserita la proprieta visible diventa false
     findContact(){
       this.contacts.map((contact, index) => {
         
@@ -67,20 +68,11 @@ createApp({
   },
   
   computed: {
-    
+    // creo un array con i msg con propriteta visible = true per poi stamparli sull'HTML
     visibleContact(){
       return this.contacts.filter(contact => contact.visible == true)
-    },
+    }
     
-    
-    // findContact(){
-    //   this.contacts.forEach((contact, index) => {
-    //   if(contact[index].name.includes(this.search)){
-    //     contact[index].visible == true
-    //   }else{contact[index].visible == false}
-    //   })
-    // }
-
   },
   
   mounted() {
