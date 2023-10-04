@@ -176,7 +176,6 @@ body {
   position: absolute;
   top: 0;
   right: 5px;
-  font-size: 0.8rem;
 }
 
 .cst-btn {
@@ -184,6 +183,10 @@ body {
   margin: 0;
   border: none;
 
+}
+
+.msg ul {
+  font-size: 0.8rem;
 }
 
 .cst-wrap {

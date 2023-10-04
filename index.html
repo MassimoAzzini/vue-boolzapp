@@ -89,14 +89,13 @@
             <div class="contact-info d-flex flex-column">
               <span class="name">{{contact.name}}</span>
               <!-- ultimo messaggio -->
-              <span
-                class="last-message">{{lastItemArray(contact).message}}</span>
+              <span v-if="contact.messages.length > 0" class="last-message">{{lastItemArray(contact).message}}</span>
             </div>
           </div>
 
           <!-- data ultimo messaggio -->
           <div class="last-message">
-            <span>{{lastItemArray(contact).date}}</span>
+            <span v-if="contact.messages.length > 0">{{lastItemArray(contact).date}}</span>
           </div>
         </div>
         <!-- fine contatto -->
@@ -119,7 +118,7 @@
           </div>
           <div class="contact-info d-flex flex-column justify-content-center">
             <span class="name">{{contact.name}}</span>
-            <span class="last-message">{{lastItemArray(contact).date}}</span>
+            <span v-if="contact.messages.length > 0" class="last-message">{{lastItemArray(contact).date}}</span>
           </div>
         </div>
         <div class="d-flex align-items-center">
@@ -138,7 +137,7 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><button class="dropdown-item" type="button">Info Messaggio</button></li>
-                <li><button class="dropdown-item" type="button">Cancella Messaggio</button></li>
+                <li><button @click="deleteMsg(index)" class="dropdown-item" type="button">Cancella Messaggio</button></li>
               </ul>
             </div>          
   

@@ -59,9 +59,11 @@ createApp({
           this.contacts[index].visible = true
         }else{this.contacts[index].visible = false}
       })
-    }
+    },
 
-    
+    deleteMsg(index){
+      this.contacts[this.indexActive].messages.splice(index, 1)
+    }
   },
   
   computed: {
