@@ -54,21 +54,27 @@
           </div>
         </div>
         <!-- end notifiche -->
+
+        <!-- ricerca contatti -->
         <div class="search w-100 d-flex align-items-center px-2">
           <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+          <input v-model="search" class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
+        <!-- end ricerca contatti -->
+
       </div>
       <!-- ent top-side -->
 
+
       <!-- bottom side -->
       <div class="bottom-side">
+
         <!-- contatto -->
         <div
           @click="indexActive = index"
           :class="{'active' : index === indexActive}"
           class="contact d-flex justify-content-between ps-3 p-2"
-          v-for="(contact, index) in contacts">
+          v-for="(contact, index) in visibleContacts">
 
           <div class="h-100 d-flex">
             <div class="image align-self-center me-3">

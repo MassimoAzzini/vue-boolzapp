@@ -8,6 +8,7 @@ createApp({
     return {
       contacts,
       indexActive: 0,
+      visibleContacts:[]
     }
   },
 
@@ -24,7 +25,7 @@ createApp({
       return nawTime
     },
 
-    // nuovo messaggio critto
+    // nuovo messaggio scritto
     addMsg(){
       const newMsgObj = {
         date: this.clock(),
@@ -49,11 +50,16 @@ createApp({
       };
       
       this.contacts[this.indexActive].messages.push(newReceivedMsgObj);
-    }
+    },
 
   },
 
   computed: {
+
+    visibleContact(){
+      return this.contacts.filter(contact => this.contacts.visible = true)
+    },
+    
 
   },
   
