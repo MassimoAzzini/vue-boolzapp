@@ -172,7 +172,20 @@ body {
 }
 /*----------- END MESSAGE CONTAINER ------------*/
 
-
-.font-dropdown *{
+.cst-dropdown{
+  position: absolute;
+  top: 0;
+  right: 5px;
   font-size: 0.8rem;
+}
+
+.cst-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+}
+
+.cst-wrap {
+  overflow-wrap: anywhere;
 }
