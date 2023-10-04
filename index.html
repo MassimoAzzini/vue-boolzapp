@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
 
+  <!-- FONT-FAMILY LATO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- LUXON -->
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
 
@@ -104,7 +109,7 @@
     <!---------------------- container message ---------------------------->
     <div
       class="contact-message-container h-100"
-      v-for="(contact, index) in contacts"
+      v-for="(contact, index) in visibleContact"
       :class="{'d-none': index !== indexActive}">
       <div class="d-flex justify-content-between top-option ps-2 pe-4">
         <div class="h-100 d-flex">
@@ -126,8 +131,18 @@
       <!-- layout message -->
       <div class="msg-container d-flex flex-column">
         <div v-for="(msg, index) in contacts[indexActive].messages" class="d-flex" :class="{'my-msg': msg.status === 'sent', 'reply-msg': msg.status === 'received'}">
+          <div class="btn-group font-dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Right-aligned menu example
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>          
           <span class="msg position-relative">
-            <span>{{msg.message}}</span>
+            <div>{{msg.message}}</div>
             <span class="time">{{msg.date}}</span>
           </span>
         </div>

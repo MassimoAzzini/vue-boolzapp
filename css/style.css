@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to top, #dadbd3 85%, #009688 15%);
+  font-family: 'Lato', sans-serif;
 }
 
 .cst-container {
@@ -170,3 +171,8 @@ body {
   right: 5px;
 }
 /*----------- END MESSAGE CONTAINER ------------*/
+
+
+.font-dropdown *{
+  font-size: 0.8rem;
+}
