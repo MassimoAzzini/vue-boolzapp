@@ -55,7 +55,7 @@ createApp({
     findContact(){
       if(this.contacts.name.includes(this.search)){
         this.contacts.visible == true
-      }else{this.contacts.visible == false},
+      }else{this.contacts.visible == false}
     }
   },
 
